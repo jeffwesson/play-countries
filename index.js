@@ -36,3 +36,42 @@ console.log(getMostPopulousSubRegion(data));
 // 	}
 // 	return a;
 // }, {area: Infinity, c: undefined}))
+
+
+// const getMostBorders = (data) => {
+// 	let limit = data.reduce((acc, currentCountry) => {
+// 		if (currentCountry.borders.length && currentCountry.borders.length >= acc.len) {
+// 			acc.len = currentCountry.borders.length;
+// 			acc.country = currentCountry;
+// 		}
+// 		return acc;
+// 	}, {len: 0, country: null});
+
+// 	return data.filter(country => country.borders.length === limit.len);
+// };
+
+// const getSmallest = (data) => {
+// 	let limit = data.reduce((acc, currentCountry) => {
+// 		if (currentCountry.area <= acc.area && currentCountry.area > -1) {
+// 			acc.area = currentCountry.area;
+// 			acc.country = currentCountry;
+// 		}
+// 		return acc;
+// 	}, {area: Infinity, country: null});
+
+// 	return data.filter(country => country.area === limit.area);
+// };
+
+// const getLargest = (data) => {
+// 	return data.reduce((acc, currentCountry) => {
+// 		if (currentCountry.area >= acc.area && currentCountry.area > -1) {
+// 			acc.area = currentCountry.area;
+// 			acc.country = currentCountry;
+// 		}
+// 		return acc;
+// 	}, {area: -Infinity, country: null});
+
+// 	return data.filter(country => country.area === limit.area);
+// };
+
+// console.log(data.filter(c => c.cca3 === 'USA')[0].area);
